@@ -211,4 +211,4 @@ ALMiniumは、Redmine,Git,Jenkinsを初め様々なオープンソースソー�
 ALMiniumが用意するインストーラ及びスクリプトは、修正BSDライセンスで
 提供します。修正BSDライセンスについては、下記のURLをご覧ください。
 
-
+ * http://opensource.org/licenses/BSD-2-Clause
