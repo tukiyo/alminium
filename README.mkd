@@ -200,3 +200,15 @@ ALMiniumはセキュリティを考えてサーバ上のブランチの上書き
 
  * ALMiniumのアップグレード
   * http://www.sssg.org/blogs/hiro345/archives/13007.html
+
+### Q: ALMiniumのライセンスは何ですか？
+
+ALMiniumは、Redmine,Git,Jenkinsを初め様々なオープンソースソース
+ソフトウェアをセットアップしてインストールするツールです。
+インストールしたソフトウェアについては、個々のライセンスに
+従います。
+
+ALMiniumが用意するインストーラ及びスクリプトは、修正BSDライセンスで
+提供します。修正BSDライセンスについては、下記のURLをご覧ください。
+
+ * http://opensource.org/licenses/BSD-2-Clause
