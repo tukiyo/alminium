@@ -14,6 +14,15 @@ RM_ARC=http://www.redmine.org/releases/redmine-${RM_VER}.tar.gz
 CPCMD='cp -fr'
 RMCMD='rm -fr'
 
+MEM=`grep MemTotal /proc/meminfo|awk '{print $2}'`
+if [ $MEM -lt 1000000 ]
+then
+  echo "メモリが不足しています。"
+  echo "ALMiniumのインストールは1GB以上のRAMが利用できるマシン及び仮想マシンに"
+  echo "インストールしてください"
+  exit
+fi
+
 if [ "$USER" != 'root' ]
 then
     echo "ALMiniumのインストールはルートユーザで行う必要があります。"
