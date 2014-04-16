@@ -1,4 +1,3 @@
-
 # インストールするプラグインのリスト
 # 下記の形式で記述:
 #
@@ -14,7 +13,7 @@ redmine_importer,master,https://github.com/zh/redmine_importer.git
 redmine_code_review,default,https://bitbucket.org/haru_iida/redmine_code_review
 redmine_hudson,redmine2.x,https://bitbucket.org/okamototk/redmine_hudson
 ##redmine_ms_projects,master,https://github.com/suer/redmine_ms_projects.git
-redmine_backlogs,master,https://github.com/backlogs/redmine_backlogs.git
+redmine_backlogs,master,https://github.com/alminium/redmine_backlogs.git
 redmine_spent_time_column,backlogs-support,https://github.com/mikoto20000/redmine_spent_time_column.git
 #redmine_scm,HEAD,http://svn.s-andy.com/scm-creator/
 redmine_scm,master,https://github.com/alminium/redmine_scm.git
