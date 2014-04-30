@@ -85,14 +85,14 @@ mv plugins/redmine_hudson/Gemfile plugins/redmine_hudson/Gemfile.org
 
 bundle install --path vendor/bundler --without development test postgresql sqlite
 
-$RAKE redmine:plugins:migrate
-$RAKE generate_secret_token
-$RAKE db:migrate
-$RAKE tmp:cache:clear
-$RAKE tmp:sessions:clear
-$RAKE redmine:plugins:process_version_change
+bundle exec $RAKE redmine:plugins:migrate
+bundle exec $RAKE generate_secret_token
+bundle exec $RAKE db:migrate
+bundle exec $RAKE tmp:cache:clear
+bundle exec $RAKE tmp:sessions:clear
+bundle exec $RAKE redmine:plugins:process_version_change
 touch backlogs.dev
-$RAKE redmine:backlogs:install task_tracker=サポート story_trackers=機能 labels=false
+bundle exec $RAKE redmine:backlogs:install task_tracker=サポート story_trackers=機能 labels=false
 
 # FIXME: to avoid open_flash_chart assets aren't copied.
 cp -fr plugins/open_flash_chart/assets public/plugin_assets/open_flash_chart
