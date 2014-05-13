@@ -28,7 +28,7 @@ then
   cd ~/rpmbuild/SPECS
   rpmbuild -bb ruby21x.spec
   ARCH=`uname -m`
-  rpm -Uvh ~/rpmbuild/RPMS/${ARCH}/ruby-2.1.0*.rpm
+  rpm -Uvh ~/rpmbuild/RPMS/${ARCH}/ruby-2.1.*.rpm
 
   popd
 fi
