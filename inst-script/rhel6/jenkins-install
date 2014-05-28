@@ -53,6 +53,16 @@ curl --noproxy localhost -X POST -H "Accept: application/json" -d @/tmp/default.
 if [ x"$http_proxy" != x"" ]
 then
   # set proxy. sorry IPv4 only and user:pass not supported...
+  proxyuser=`echo $http_proxy | sed 's/.*:\/\/\([a-zA-Z0-9]*\):.*/\1/'`
+  proxypass=`echo $http_proxy | sed 's/.*:\/\/[a-zA-Z0-9]*:\([a-zA-Z0-9:]*\)\@.*/\1/'`
+  #echo proxyuser=$proxyuser
+  #echo proxypass=$proxypass
+
+  if [ x"$proxyuser" != x"" ]
+  then
+    http_proxy=`echo $http_proxy | sed "s/$proxyuser:$proxypass\@//"`
+  fi
+
   proxyserver=`echo $http_proxy | cut -d':' -f2 | sed 's/\/\///g'`
   proxyport=`echo $http_proxy | cut -d':' -f3 | sed 's/\///g'`
   #echo $proxyserver
