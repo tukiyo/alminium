@@ -21,7 +21,7 @@ then
   fi
 else
   yum -y --nogpgcheck install wget
-  EPEL_RPM_NAME=`wget -O /dev/stdout  http://dl.fedoraproject.org/pub/epel/6/x86_64/ |grep epel-release | awk -F\" '{print $2}'`
+  EPEL_RPM_NAME=`wget -O /dev/stdout http://download.fedoraproject.org/pub/epel/6/x86_64/repoview/epel-release.html | grep -o 'epel-release-[0-9]*-[0-9]*.noarch.rpm'`
   rpm -Uvh http://dl.fedoraproject.org/pub/epel/6/x86_64/${EPEL_RPM_NAME}
 fi
 yum -y --nogpgcheck install `grep -v "^#" inst-script/rhel6/packages.lst`
