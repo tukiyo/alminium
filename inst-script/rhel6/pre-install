@@ -44,5 +44,5 @@ service mysqld start
 
 if [[ `which ruby` == "" || ! `ruby --version` =~ 2.1. ]]
 then
-    bash inst-script/rhel6/ruby2.1-install
+    rpm -Uvh "https://github.com/hansode/ruby-rpm/blob/master/6/x86_64/ruby-2.1.2-2.el6.x86_64.rpm?raw=true"
 fi
