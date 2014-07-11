@@ -1,0 +1,6 @@
+.bundle/
+Gemfile.lock
+cache/
+gems.installed
+packages.installed
+vendor/bundler/
