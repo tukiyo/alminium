@@ -6,7 +6,7 @@
 export RAILS_ENV=production
 export INSTALL_DIR=/opt/alminium
 export SCRIPT_DIR=`pwd`
-RM_VER=2.5.1
+RM_VER=2.5.2
 RM_ARC=http://www.redmine.org/releases/redmine-${RM_VER}.tar.gz
 #RM_ARC=http://redmine.rubyforge.org/svn/tags
 CPCMD='cp -fr'
