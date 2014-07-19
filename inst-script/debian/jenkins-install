@@ -1,7 +1,8 @@
 #!/bin/sh
 
-apt-get -y -qq install jenkins
-
+wget -q -O - http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key | sudo apt-key add -
+echo "deb http://pkg.jenkins-ci.org/debian binary/" > /etc/apt/sources.list.d/jenkins.list
+apt-get update
 if [ ! -d /var/lib/jenkins/persona ]
 then
   git clone https://github.com/okamototk/jenkins-persona-hudmi /var/lib/jenkins/persona
