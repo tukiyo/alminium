@@ -1,5 +1,10 @@
 #!/bin/sh
 
+if [ ! -x /bin/netstat ]
+then
+  apt-get -y -qq install net-tools
+fi
+
 apt-get -y -qq install jenkins
 
 if [ ! -d /var/lib/jenkins/persona ]
